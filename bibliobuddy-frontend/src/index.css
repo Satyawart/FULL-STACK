@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --ring: #3b82f6;
+}
+
+* { outline-color: var(--ring); }
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+}
+
+input, button, textarea, select {
+  @apply focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-soft-blue;
+}
+
+.neu {
+  @apply bg-soft-white shadow-neu rounded-2xl;
+}
+
+.card {
+  @apply neu p-5 md:p-6;
+}
+
+.btn {
+  @apply inline-flex items-center justify-center rounded-xl px-4 py-2 font-medium transition-colors duration-200 shadow-neuSm;
+}
+
+.btn-primary {
+  @apply bg-white hover:bg-soft-accent border border-soft-shadow;
+}
+
+.input {
+  @apply w-full rounded-xl border border-soft-shadow bg-white px-4 py-3 placeholder:text-black shadow-neuSm;
+}
+
+.label {
+  @apply block text-sm font-medium mb-1;
+}
